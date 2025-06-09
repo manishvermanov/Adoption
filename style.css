@@ -257,6 +257,8 @@ nav.sticky {
 }
 
 /* requirement ends/pets start */
+
+
 /* PETS HEADLINES */
 .pets-headlines {
   display: flex;
@@ -642,13 +644,20 @@ footer {
 /* phone */
 
 @media (max-width: 768px) and (min-width:0px) {
+
+    section {
+    width: 100%;
+    min-height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
     /* navbar */
 
     nav
     {
         padding: 20px 30px;
         width: 100%;
-        background-color: green;
         height: 10%;
     }
     nav .btn
@@ -730,29 +739,32 @@ footer {
     }
 
     .hero-images img{
-        width: 100px;
+        width: 180px;
     }
     .requirements
     {
-        margin-top: 150px;
+        margin-top: 0;
     }
     .requirements-headlines h1{
+        padding-left: 5%;
         font-size: 32px;
     }
     .requirements-headlines p{
+        padding-left: 5%;
         font-size: 16px;
     }
     .requirements-headlines{
         width: 100%;
     }
     .requirements img{
+        padding-right: 5%;
         width: 90%;
     }
     .r-item h5{
         font-size: 14px;
     }
     .r-item-container{
-        padding-left: 14px;
+        padding-left: 5%;
     }
 
     .pets-headlines h1{
@@ -763,14 +775,61 @@ footer {
         font-size: 35px;
     }
 
-    .pets-collection{
-        flex-direction: column;
-    }
+    .carousel-wrapper {
+    width: 100%;
+  }
 
-    .btn-pets{
-        width: 230px;
-    }
+  .pets-collection {
+    gap: 5%;
+    padding: 2% 6%;
+  }
+
+  .pet-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 6%;
+    border-radius: 16px;
+  }
+
+  .pet-item img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  display: block;
+  border-radius: 10%;
+}
+
+
+  .carousel-btn.prev {
+    left: 2%;
+  }
+
+  .carousel-btn.next {
+    right: 2%;
+  }
+
+  .pets-headlines h1 {
+    font-size: 2.4rem;
+  }
+
+  .pets-headlines i {
+    font-size: 2.4rem;
+  }
+
+  .pet-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .btn-pets {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  /* about sections starts */
+
     .about{
+        margin-top: 10%;
         padding: 0 20px;
     }
 
@@ -784,11 +843,14 @@ footer {
 
     .about-info{
         flex-direction: column;
+        gap: 15px;
     }
     .about img{
         width: 100%;
         height: auto;
     }
+
+    /* testimony section */
 
     .testimonials{
         padding: 0 20px;
@@ -800,46 +862,77 @@ footer {
     .testimonials h6{
         font-size: 16px;
     }
+.testimony-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .testimony-item{
-        width: 100%;
-        padding: 24px;
-    }
+  .testimony-item {
+    width: 60%;       /* Full width inside container */
+    max-width: 100%;  /* No overflow */
+  }
 
-    .testimony-text{
-        font-size: 13px;
-    }
-    .testimony-name img{
-        width: 34px;
-        height: 34px;
-    }
-    .testimony-name i
-    {
-        font-size: 36px;
-    }
+  .testimony-text {
+    font-size: 1rem;
+  }
 
-    .testimony-name p{
-        font-size: 12px;
-    }
+  .testimony-name-item h4 {
+    font-size: 1.1rem;
+  }
 
-    .footer-container{
-        flex-direction: column;
-    }
-    .footer-brand{
-        order: 1;
-        border: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    }
-    .footer-links{
-        order: 2;
-    }
-    .footer-contact-info{
-        order: 3;
-    }
-    .copyright
-    {
-        font-size: 10px;
-    }
+  .testimony-name-item p {
+    font-size: 0.9rem;
+  }
+
+  .testimony-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+
+     .footer-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .footer-brand,
+  .footer-links {
+    width: 48%; /* Side-by-side on first row */
+  }
+
+  .footer-contact-info {
+    width: 100%; /* Second row */
+    margin-top: 1.5rem;
+  }
+
+  .fbox {
+    margin-bottom: 0; /* Remove extra spacing */
+  }
+
+  .footer-links .link-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-links .links {
+    width: 48%;
+  }
+
+  .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info-item p {
+    margin: 0;
+  }
 
 
 
